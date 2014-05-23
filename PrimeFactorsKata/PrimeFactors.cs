@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace PrimeFactorsKata
 {
-    public class Class1
+    public class PrimeFactors
     {
+        public List<int> Generate(int n)
+        {
+            return new List<int>();
+        }
     }
 }
