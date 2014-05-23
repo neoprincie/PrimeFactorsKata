@@ -11,15 +11,19 @@ namespace PrimeFactorsKata
         public List<int> Generate(int n)
         {
             var primeFactors = new List<int>();
+            var potentialPrime = 2;
 
-            while (n % 2 == 0)
+            while(n > 1)
             {
-                n /= 2;
-                primeFactors.Add(2);
-            }
-            if (n != 1)
-                primeFactors.Add(n);
+                while (n % potentialPrime == 0)
+                {
+                    n /= potentialPrime;
+                    primeFactors.Add(potentialPrime);
+                }
 
+                potentialPrime++;
+            }
+            
             return primeFactors;
         }
     }
