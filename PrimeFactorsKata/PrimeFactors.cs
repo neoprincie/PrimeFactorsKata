@@ -12,10 +12,13 @@ namespace PrimeFactorsKata
         {
             var primeFactors = new List<int>();
 
-            if (n == 2)
+            while (n % 2 == 0)
+            {
+                n /= 2;
                 primeFactors.Add(2);
-            if (n == 3)
-                primeFactors.Add(3);
+            }
+            if (n != 1)
+                primeFactors.Add(n);
 
             return primeFactors;
         }
