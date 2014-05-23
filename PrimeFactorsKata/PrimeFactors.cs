@@ -10,10 +10,14 @@ namespace PrimeFactorsKata
     {
         public List<int> Generate(int n)
         {
-            if (n == 2)
-                return new List<int>() { 2 };
+            var primeFactors = new List<int>();
 
-            return new List<int>();
+            if (n == 2)
+                primeFactors.Add(2);
+            if (n == 3)
+                primeFactors.Add(3);
+
+            return primeFactors;
         }
     }
 }

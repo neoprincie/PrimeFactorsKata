@@ -29,5 +29,11 @@ namespace PrimeFactorsKata.Tests
         {
             Assert.That(primeFactors.Generate(2), Is.EquivalentTo(new List<int>() { 2 }));
         }
+
+        [Test]
+        public void Generate_Given3_ShouldReturn3()
+        {
+            Assert.That(primeFactors.Generate(3), Is.EquivalentTo(new List<int>() { 3 }));
+        }
     }
 }
