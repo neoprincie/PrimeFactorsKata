@@ -10,11 +10,24 @@ namespace PrimeFactorsKata.Tests
     [TestFixture]
     public class PrimeFactorsTests
     {
+        private PrimeFactors primeFactors;
+
+        [SetUp]
+        public void SetUp()
+        {
+            primeFactors = new PrimeFactors();
+        }
+
         [Test]
         public void Generate_Given1_ShouldReturnEmpty()
         {
-            var primeFactors = new PrimeFactors();
             Assert.That(primeFactors.Generate(1), Is.EquivalentTo(new List<int>()));
+        }
+
+        [Test]
+        public void Generate_Given2_ShouldReturn2()
+        {
+            Assert.That(primeFactors.Generate(2), Is.EquivalentTo(new List<int>() { 2 }));
         }
     }
 }

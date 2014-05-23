@@ -10,6 +10,9 @@ namespace PrimeFactorsKata
     {
         public List<int> Generate(int n)
         {
+            if (n == 2)
+                return new List<int>() { 2 };
+
             return new List<int>();
         }
     }
